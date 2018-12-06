@@ -1,3 +1,9 @@
+const reverseWords = require('../utils/reverseWords');
+
 exports.index = (req, res, next) => {
-  res.json("Reverse Words controller");
+  const sentence = req.query.sentence || '';
+  
+  const newSentence = reverseWords(sentence);
+
+  res.json(newSentence);
 }
