@@ -27,6 +27,7 @@ exports.index = (req, res, next) => {
     return;
   }
 
+  // It doesn't fit any of options - return error
   console.log('Responding with "Error"')
   res.json("Error");
 }
