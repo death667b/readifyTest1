@@ -2,6 +2,12 @@ exports.index = (req, res, next) => {
   const {a, b, c} = req.query || 0;
   console.log(`Triange Type(a,b,c) = ${a}, ${b} and ${c}`)
 
+  // Test for valid inpup
+  if (a < 1 || b < 1 || c < 1) {
+    console.log('Responding with "Error"')
+    res.json("Error");
+  }
+
   // Return if Equilateral triangle
   if (a === b && b === c) {
     console.log('Responding with "Equilateral"')
