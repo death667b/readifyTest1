@@ -1,3 +1,5 @@
+# This Dockerfile is for AWS
+
 FROM node:latest
 
 COPY . /src
